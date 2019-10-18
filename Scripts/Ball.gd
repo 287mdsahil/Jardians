@@ -20,5 +20,5 @@ func _process(delta):
 			print(body.get_node("Anchor").get_global_position())
 			var dir = get_global_position() - body.get_node("Anchor").get_global_position()
 			dir = dir.normalized()
-			var velocity = dir*300
+			var velocity = dir*speed
 			linear_velocity = velocity
