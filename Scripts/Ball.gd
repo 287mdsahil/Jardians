@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	var bodies = get_colliding_bodies()
 	for body in bodies:
-		if(body.is_in_group("Brick")):
+		if(body.is_in_group("Bricks")):
 			body.queue_free()
 		elif(body.get_name() == "Paddle"):
 			var speed = linear_velocity.length()
@@ -22,3 +22,7 @@ func _process(delta):
 			dir = dir.normalized()
 			var velocity = dir*speed
 			linear_velocity = velocity
+			
+	if(position.y > get_viewport_rect().end.y):
+		queue_free()
+		print("fucl")

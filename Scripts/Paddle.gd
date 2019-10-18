@@ -15,7 +15,6 @@ func _physics_process(delta):
 	
 func _input(event):
 	if event.is_pressed():
-		print("mousepressed")
 		var ball = ball_scene.instance()
 		ball.position = Vector2(position.x,480)
 		get_tree().root.add_child(ball)
