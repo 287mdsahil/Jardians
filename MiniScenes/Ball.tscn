@@ -12,7 +12,6 @@ extents = Vector2( 14, 14 )
 
 [node name="Ball" type="RigidBody2D"]
 editor/display_folded = true
-position = Vector2( 512, 480 )
 mode = 2
 physics_material_override = SubResource( 3 )
 gravity_scale = 0.0
